@@ -59,9 +59,9 @@ function batchGenerator() {
         };
         result.style.display = 'block'
         print1.style.display = 'inline-block';
-        print1.value = "print numbers assigned to ACTIVE DRUGS"
+        print1.value = "print numbers assigned to GROUP 1"
         print2.style.display = 'inline-block';
-        print2.value = "print numbers assigned to PLACEBO"
+        print2.value = "print numbers assigned to GROUP 2"
     };
 };
 
