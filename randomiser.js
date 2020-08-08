@@ -23,9 +23,9 @@ function generator() {
             result.style.fontWeight = '400';
             result.innerHTML = "Done!"
             print1.style.display = 'inline-block';
-            print1.value = "print numbers assigned to ACTIVE DRUGS"
+            print1.value = "print numbers assigned to GROUP 1"
             print2.style.display = 'inline-block';
-            print2.value = "print numbers assigned to PLACEBO"
+            print2.value = "print numbers assigned to GROUP 2"
         }
         else {
             while (genNumbers.includes(num)) {
@@ -37,7 +37,7 @@ function generator() {
             if (evenPrime % 2 === 0) {
                 //result.style.display = 'block';
                 result.style.color = "green"
-                result.innerHTML = "LABEL ACTIVE DRUG: " + num;
+                result.innerHTML = "LABEL GROUP 1: " + num;
                 //evenPrime += 1;
                 activeDrugs.push(' ' + num);
                 if (counts % 10 === 1 && counts !== 1) {
@@ -47,7 +47,7 @@ function generator() {
             }
             else {
                 result.style.color = "red"
-                result.innerHTML = "LABEL PLACEBO: " + num
+                result.innerHTML = "LABEL GROUP 2: " + num
                 //evenPrime += 1;
                 placebo.push(' ' + num);
                 if (counts % 10 === 0 && counts !== 0) {
@@ -77,10 +77,10 @@ generate.addEventListener('click', generator);
 print1.addEventListener('click', function () {
 
     var blob = new Blob([activeDrugs], { type: 'application/msword' }, 'msword.doc');
-    saveAs(blob, 'Active-Drugs.doc')
+    saveAs(blob, 'Group-1.doc')
 });
 
 print2.addEventListener('click', function () {
     var blob = new Blob([placebo], { type: 'application/msword' }, 'msword.doc');
-    saveAs(blob, 'Placebo.doc');
+    saveAs(blob, 'Group-2.doc');
 });
