@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Batch page - Number Randomiser</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="randomiser.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Welcome to number randomiser - batch randomiser</h1>
+            <p>This programme randomly assigns a series of numbers starting from a minimum up to a maximum specified by
+                you in to two groups</p>
+        </header>
+        <div>
+            <form id='form1'>
+                <label for="minimum">What is the minimum number in the series? </label>
+                <input type="number" id="minimum" min=1 name="minimum"><br>
+                <label for="maximum">What is the maximum number in the series?</label>
+                <input type="number" id="maximum" min=1 name="maximum"><br>
+                <input type="button" value="ENTER" onclick="getValue()">
+            </form>
+        </div>
+        <div id='but'>
+            <button type="button" id="batchGenerate">GENERATE</button>
+        </div>
+        <div id="result" hidden>DONE</div>
+        <input hidden id='file1' type="button">
+        <input hidden id='file2' type="button">
+        <script src="batchrandomiser.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    </main>
+    <footer>
+        <p>&#169Sofiyullah for Hafsoh</p>
+    </footer>
+</body>
+
+</html>

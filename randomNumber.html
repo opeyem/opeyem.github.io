@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>One at a time - Number Randomiser</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="randomiser.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Welcome to number randomiser - one at a time randomiser</h1>
+            <p>This programme randomises a series of numbers starting from a minimum up to a maximum specified by you
+            </p>
+        </header>
+        <div>
+            <form id='form1'>
+                <label for="minimum">What is the minimum number in the series? </label>
+                <input type="number" id="minimum" min=1 name="minimum"><br>
+                <label for="maximum">What is the maximum number in the series?</label>
+                <input type="number" id="maximum" min=1 name="maximum"><br>
+                <input type="button" value="ENTER" onclick="getValue()">
+            </form>
+        </div>
+        <div id='but'>
+            <button type="button" id="generate">GENERATE</button>
+        </div>
+        <div id="result" hidden></div>
+        <input hidden id='file1' type="button">
+        <input hidden id='file2' type="button">
+        <script src="randomiser.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+
+    </main>
+    <footer>
+        <p>&#169Sofiyullah for Hafsoh</p>
+    </footer>
+</body>
+
+</html>
