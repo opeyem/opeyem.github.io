@@ -71,7 +71,7 @@ batchGenerate.addEventListener('click', batchGenerator);
 print1.addEventListener('click', function () {
 
     var blob = new Blob([activeDrugs], { type: 'application/msword' }, 'msword.doc');
-    saveAs(blob, 'Active-Drugs.doc')
+    saveAs(blob, 'Group-1.doc')
 });
 
 print2.addEventListener('click', function () {
@@ -83,5 +83,5 @@ print2.addEventListener('click', function () {
     pdfplacebo.save('placebo.pdf')**/
     //the codes below save as ms word document
     var blob = new Blob([placebo], { type: 'application/msword' }, 'msword.doc');
-    saveAs(blob, 'Placebo.doc');
+    saveAs(blob, 'Group-2.doc');
 });
